@@ -8,16 +8,19 @@ const App = () => {
   const [isModelOpen, setisModelOpen] = useState(false)
   const [taskList,setTaskList ] = useState([
   {
+    done: false,
     id: crypto.randomUUID(),
     title: "Do the thing you’ve been avoiding",
     description: "You know exactly which one. Don’t pretend you don’t."
   },
   {
+    done: false,
     id: crypto.randomUUID(),
     title: "Reply to messages",
     description: "Yes, even the awkward ones you opened and ignored."
   },
   {
+    done: false,
     id: crypto.randomUUID(),
     title: "Fix your sleep schedule",
     description: "Scrolling at 2AM is not a personality trait."

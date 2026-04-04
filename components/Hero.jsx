@@ -19,6 +19,7 @@ const Hero = ({ taskList, setTaskList }) => {
       <div className='bg-zinc-700 h-full w-[30%] rounded-2xl flex flex-col gap-2 p-4'>
         {taskList.map((task) => (
           <Card
+            done={task.done}
             key={task.id}
             title={task.title}
             number={task.id}
@@ -39,6 +40,7 @@ const Hero = ({ taskList, setTaskList }) => {
         </div>
 
         <div className='mt-auto flex justify-end'>
+          <div className={`${selectedTask? 'flex' : 'hidden'}`}> 
           <button
             onClick={deleteTask}
             disabled={selected === null}
@@ -46,6 +48,7 @@ const Hero = ({ taskList, setTaskList }) => {
           >
             Delete
           </button>
+          </div>
         </div>
 
       </div>
