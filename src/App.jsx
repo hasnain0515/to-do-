@@ -5,6 +5,13 @@ import Button from '../components/Button'
 import Model from '../components/Model'
 
 const App = () => { 
+  function updatedone (index) {
+    var updatedList = [...taskList]
+      updatedList = updatedList.find((task)=> {task.id === index,
+      task.done = !task.done
+    })
+    setTaskList(updatedList)
+  }
   const [isModelOpen, setisModelOpen] = useState(false)
   const [taskList,setTaskList ] = useState([
   {
@@ -29,7 +36,7 @@ const App = () => {
   return (
     <div className='text-white bg-zinc-600 w-screen h-screen '>
       <Navbar/>
-      <Hero taskList={taskList} setTaskList={setTaskList}/>
+      <Hero taskList={taskList} setTaskList={setTaskList} updatedone = {updatedone} />
       <Button setisModelOpen={setisModelOpen}/>
       <Model isModelOpen={isModelOpen} setisModelOpen={setisModelOpen} setTaskList={setTaskList}/>
     </div>

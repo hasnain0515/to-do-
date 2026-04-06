@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Card from './Card'
 
-const Hero = ({ taskList, setTaskList }) => {
+const Hero = ({ taskList, setTaskList , updatedone
+}) => {
   const [selected, setSelected] = useState(null)
 
   const deleteTask = () => {
@@ -24,6 +25,7 @@ const Hero = ({ taskList, setTaskList }) => {
             title={task.title}
             number={task.id}
             setselected={setSelected}
+            updatedone = {updatedone} 
           />
         ))}
       </div>
