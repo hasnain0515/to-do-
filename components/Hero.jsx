@@ -4,7 +4,6 @@ import Card from './Card'
 const Hero = ({ taskList, setTaskList , updatedone
 }) => {
   const [selected, setSelected] = useState(null)
-
   const deleteTask = () => {
     if (selected === null) return
 

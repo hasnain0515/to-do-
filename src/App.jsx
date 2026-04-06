@@ -5,11 +5,13 @@ import Button from '../components/Button'
 import Model from '../components/Model'
 
 const App = () => { 
-  function updatedone (id) {
-    setTaskList((taskL) => {
-      taskL.map((task) => {task.id === id? {...task, done :!task.done} : task })
-    })
-    }
+function updatedone(id) {                                                                                                                      
+    setTaskList((taskL) =>                                                                                                                       
+      taskL.map((task) =>                                                                                                                        
+        task.id === id ? { ...task, done: !task.done } : task                                                                                   
+      )                                                                                                                                          
+    )                                                                                                                                            
+  }
   const [isModelOpen, setisModelOpen] = useState(false)
   const [taskList,setTaskList ] = useState([
   {
