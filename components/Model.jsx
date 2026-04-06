@@ -6,6 +6,7 @@ const Model = ({isModelOpen, setisModelOpen, setTaskList}) => {
     const handlesubmit = (e) => {
         e.preventDefault()
         const newTask = {
+            done : false,
             id: crypto.randomUUID(),
             title : inputTitle, 
             description : inputdesc
