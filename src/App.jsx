@@ -7,7 +7,7 @@ import Model from '../components/Model'
 const App = () => { 
   function updatedone (index) {
     var updatedList = [...taskList]
-      updatedList = updatedList.find((task)=> {task.id === index,
+      updatedList = updatedList.find((task)=> {if (task.id === index)
       task.done = !task.done
     })
     setTaskList(updatedList)
